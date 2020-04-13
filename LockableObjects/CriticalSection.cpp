@@ -22,3 +22,8 @@ void CriticalSection::Unlock()
 	cout << "Leaving Critical Section" << endl;
 	LeaveCriticalSection(&m_CS);
 }
+
+bool CriticalSection::TryLock()
+{
+	return TryEnterCriticalSection(&m_CS);
+}

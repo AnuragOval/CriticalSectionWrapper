@@ -4,13 +4,17 @@
 #include <iostream>
 #include"CriticalSection.h"
 #include"AutoLock.h"
+#include"Mutex.h"
 int main()
 {
     CriticalSection cs;
+    Mutex m;
     std::cout << "Hello World!\n";
     
     {
         AutoLock lock(&cs);
+        AutoLock lock_mutex(&m);
+        
     }
 }
 

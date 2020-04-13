@@ -8,7 +8,7 @@ public:
 	~CriticalSection();
 	virtual void lock();
 	virtual void Unlock();
-	
+	virtual bool TryLock() override;
 
 private:
 	CRITICAL_SECTION m_CS;
